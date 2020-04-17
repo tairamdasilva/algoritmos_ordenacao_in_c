@@ -27,10 +27,37 @@ avrg = total/3;
 
 printf("\nmedia total =  %f", avrg);
 
+==========================================================================
+
+//solicitando insert de vetores para usuario
+
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+
+
+int main(void) {
+		
+	srand(time(NULL));
+	int i, scn, scn2, vetor[scn];
+	
+	printf("Insira tamanho de vetor[]: ");
+	scanf("%d", &scn);
+	
+	printf("Insira range de numeros: ");
+	scanf("%d", &scn2);
+	 
+	for(i=0; i<scn; i++){
+		vetor[i] = (rand() % scn2)+1;
+		printf("%d, ", vetor[i]);
+	}
+
+	return 0;	
+}
 
 ==========================================================================
 
-Exercício 001:
+/Exercício 001:
 
 Crie um programa que adicione 20.000 números aleatórios em um vetor dinâmico 
 Imprima a quantidade de memoria utilizada:
