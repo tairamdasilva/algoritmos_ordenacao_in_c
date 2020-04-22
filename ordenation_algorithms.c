@@ -89,15 +89,15 @@ void quick_sort(int vetor[TAM], int inicio, int fim ){
    pivo = vetor[meio];
    
    do{
-      while (vetor[i] < pivo) i = i + 1;
-      while (vetor[j] > pivo) j = j - 1;
+      while (vetor[i] < pivo) i++;
+      while (vetor[j] > pivo) j--;
       
       if(i <= j){
          aux = vetor[i];
          vetor[i] = vetor[j];
          vetor[j] = aux;
-         i = i + 1;
-         j = j - 1;
+         i++;
+         j--;
       }	
    }while(j > i);
    
@@ -204,7 +204,7 @@ void main(){
 	//selection_sort(vetor);
 	
 	//utilizando o quick sort **************
-	//quick_sort(vetor,0,TAM);
+	//quick_sort(vetor,0,TAM-1);
 	
 	//apos a ordenacao **************
 	printVetor(vetor);
